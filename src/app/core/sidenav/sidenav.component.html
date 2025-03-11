@@ -1,4 +1,7 @@
-<app-toolbar (toggleSidenav)="updateValue($event)"></app-toolbar>
+<app-toolbar
+  class="mat-elevation-z2"
+  (toggleSidenav)="updateValue($event)"
+></app-toolbar>
 <mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="sidenav" mode="side">
     <p>Auto-resizing sidenav</p>
