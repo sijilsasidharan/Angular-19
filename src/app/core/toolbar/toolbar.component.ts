@@ -13,7 +13,6 @@ export class ToolbarComponent {
   toggleSidenav = output<boolean>();
 
   toggleSidenavOnClick() {
-    console.log('sideNavOpen', this.sideNavOpen);
     this.sideNavOpen = !this.sideNavOpen;
     this.toggleSidenav.emit(this.sideNavOpen);
   }
