@@ -2,19 +2,23 @@ import { Component, ElementRef, input, signal, viewChild } from '@angular/core';
 import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { MatButtonModule } from '@angular/material/button';
+import { SidenavContentComponent } from './sidenav-content/sidenav-content.component';
 
 @Component({
   selector: 'app-sidenav',
-  imports: [MatSidenavModule, ToolbarComponent, MatButtonModule],
+  imports: [
+    MatSidenavModule,
+    ToolbarComponent,
+    MatButtonModule,
+    SidenavContentComponent,
+  ],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss',
 })
 export class SidenavComponent {
-  openSideNav = signal<boolean>(true);
   drawer = viewChild.required<MatDrawer>('drawer');
 
-  updateValue(value: boolean) {
-    this.openSideNav.update(() => value);
-    this.drawer().toggle(this.openSideNav());
+  updateValue() {
+    this.drawer().toggle();
   }
 }

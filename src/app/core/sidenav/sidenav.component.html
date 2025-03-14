@@ -1,12 +1,8 @@
-<app-toolbar
-  class="mat-elevation-z2"
-  (toggleSidenav)="updateValue($event)"
-></app-toolbar>
+<app-toolbar (toggleSidenav)="updateValue()"></app-toolbar>
 <mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    @if (openSideNav()) {
-    <p>Lorem, ipsum dolor sit amet consectetur.</p>
+    @if (drawer.opened) {
+    <app-sidenav-content></app-sidenav-content>
     }
     <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
       Toggle extra text

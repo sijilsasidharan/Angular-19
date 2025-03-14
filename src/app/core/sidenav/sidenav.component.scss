@@ -1,9 +1,3 @@
-@use '@angular/material' as mat;
-:root {
-  @include mat.sidenav-overrides((
-    container-background-color: orange,
-  ));
-}
 :host {
   .container {
     width: 100%;
