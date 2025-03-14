@@ -9,11 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './toolbar.component.scss',
 })
 export class ToolbarComponent {
-  sideNavOpen = false;
-  toggleSidenav = output<boolean>();
+  toggleSidenav = output<void>();
 
   toggleSidenavOnClick() {
-    this.sideNavOpen = !this.sideNavOpen;
-    this.toggleSidenav.emit(this.sideNavOpen);
+    this.toggleSidenav.emit();
   }
 }
