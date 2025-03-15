@@ -43,4 +43,28 @@
       }
     }
   }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 100%;
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--hover-color);
+      }
+      .menu-item-icon {
+        margin-right: 8px;
+      }
+      .menu-item-label {
+        font-size: 14px;
+      }
+    }
+  }
 }

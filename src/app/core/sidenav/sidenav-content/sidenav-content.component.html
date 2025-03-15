@@ -6,4 +6,9 @@
   />
   <h2 class="profile-nam">John Doe</h2>
   <a href="#">Edit profile</a>
+  <div class="menu">
+    @for (item of menuItems; track item.name) {
+    <a class="menu-item" href="#">{{ item.name }}</a>
+    }
+  </div>
 </div>
