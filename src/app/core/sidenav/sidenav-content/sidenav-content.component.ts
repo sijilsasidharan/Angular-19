@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-sidenav-content',
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './sidenav-content.component.html',
   styleUrl: './sidenav-content.component.scss',
 })

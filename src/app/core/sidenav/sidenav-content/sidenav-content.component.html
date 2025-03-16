@@ -8,7 +8,10 @@
   <a href="#">Edit profile</a>
   <div class="menu">
     @for (item of menuItems; track item.name) {
-    <a class="menu-item" href="#">{{ item.name }}</a>
+    <div>
+      <mat-icon></mat-icon>
+      <a class="menu-item" href="#">{{ item.name }}</a>
+    </div>
     }
   </div>
 </div>
