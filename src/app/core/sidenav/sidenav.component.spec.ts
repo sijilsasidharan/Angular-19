@@ -8,9 +8,8 @@ describe('SidenavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SidenavComponent]
-    })
-    .compileComponents();
+      imports: [SidenavComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SidenavComponent);
     component = fixture.componentInstance;
@@ -19,5 +18,17 @@ describe('SidenavComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have instance of drawer component', () => {
+    const drawer = component.drawer();
+    expect(component.drawer()).toBeTruthy();
+  });
+
+  it('should toggle drawer', () => {
+    const drawer = component.drawer();
+    const spy = jest.spyOn(drawer, 'toggle');
+    component.updateValue();
+    expect(spy).toHaveBeenCalled();
   });
 });
