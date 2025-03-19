@@ -8,6 +8,4 @@ import { SidenavComponent } from './core/sidenav/sidenav.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'angular19';
-}
+export class AppComponent {}
