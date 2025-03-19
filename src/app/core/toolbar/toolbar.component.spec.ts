@@ -8,9 +8,8 @@ describe('ToolbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ToolbarComponent]
-    })
-    .compileComponents();
+      imports: [ToolbarComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ToolbarComponent);
     component = fixture.componentInstance;
@@ -19,5 +18,11 @@ describe('ToolbarComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should emit toggleSidenav', () => {
+    const spy = jest.spyOn(component.toggleSidenav, 'emit');
+    component.toggleSidenavOnClick();
+    expect(spy).toHaveBeenCalled();
   });
 });
