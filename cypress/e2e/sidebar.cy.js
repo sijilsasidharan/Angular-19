@@ -13,7 +13,6 @@ describe("Sidebar", () => {
   });
   it("should should toggle", () => {
     // cy.visit('http://localhost:4200/');
-
     cy.visit("http://localhost:4200/");
     cy.get("app-sidenav").should("be.visible");
     cy.get("app-sidenav").should("contain", "My App");
