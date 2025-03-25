@@ -12,8 +12,8 @@ describe("Sidebar", () => {
     cy.get("app-sidenav").and("have.descendants", "mat-icon").contains("share");
   });
   it("should should toggle", () => {
-    // cy.visit('http://localhost:4200/');
     cy.visit("http://localhost:4200/");
+    // cy.visit("http://localhost:4200/");
     cy.get("app-sidenav").should("be.visible");
     cy.get("app-sidenav").should("contain", "My App");
     cy.get("app-sidenav").and("have.descendants", "mat-icon").contains("menu");
