@@ -1,4 +1,4 @@
-import { Component, ElementRef, input, signal, viewChild } from '@angular/core';
+import { Component, viewChild } from '@angular/core';
 import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { MatButtonModule } from '@angular/material/button';
