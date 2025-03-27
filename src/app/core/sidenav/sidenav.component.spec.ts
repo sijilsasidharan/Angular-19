@@ -22,7 +22,7 @@ describe('SidenavComponent', () => {
 
   it('should have instance of drawer component', () => {
     const drawer = component.drawer();
-    expect(component.drawer()).toBeTruthy();
+    expect(drawer).toBeTruthy();
   });
 
   it('should toggle drawer', () => {
