@@ -11,6 +11,6 @@ export class SidenavContentComponent {
   menuItems = [
     { name: 'Home', route: '/home', icon: 'home' },
     { name: 'About', route: '/about', icon: 'info' },
-    { name: 'Contact', route: '/contact', icon: 'contact' },
+    { name: 'Contact', route: '/contact', icon: 'phone' },
   ];
 }
